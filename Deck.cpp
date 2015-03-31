@@ -53,7 +53,12 @@ int Deck::getCount() return deck->getCount();
 Card Deck::deal() return deck->pop();
 
 ostream& operator <<(ostream& out, const Deck& in){ //codes for how to output a deck called "in" with operator << using variable "out"
-   
+   Stack* copy = in.deck;
+   for (int i = 0; i<copy.getCount(); i++){
+      out << copy.deck[i] << endl;
+   }
+   return out;
+}
 
 
 
