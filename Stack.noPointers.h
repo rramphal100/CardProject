@@ -6,8 +6,8 @@
 class Stack
 {
 private:
-	int capacity  = 52;
-	Card *cards;
+	static const int capacity  = 52;
+	Card cards[52];
 	int count;
 public:
 	Stack();
