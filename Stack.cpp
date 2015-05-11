@@ -3,81 +3,121 @@
 #include <string>
 using namespace std;
 
-
 Stack::Stack()
 {
-	capacity = 52;
+	stack = new Card*[100];
+	capacity = 100;
 	count = 0;
-	cards = new Card[capacity];
 }
 
-Stack::Stack(int cap)
+Stack::Stack(int size)
 {
-	capacity = cap;
+	stack = new Card*[size];
+	capacity = size;
 	count = 0;
-	cards = new Card[capacity];
 }
 
-void Stack::push(Card c)
+Stack::Stack(const Stack& other)
 {
-	if(!isFull())
-	{
-		cards[count] = c;
-		count++;
-	}
-	else
-		cerr << "Stack is full!!!" << endl;
+	count = other.count;
+	capacity = other.capacity;
+	stack = new Card*[capacity];
+
+	for (int i = 0; i < count; i++)
+		*stack[i] = *(other.stack[i]);
 }
 
-Card Stack::pop()
+Stack::~Stack()
 {
-	if(!isEmpty())
-	{
-		count--;
-		return cards[count];
-	}
+	for (int i = 0; i < count; i++)
+		delete stack[i];
 
-	cerr << "Stack is empty!!!" << endl;
-	exit(1);
-}
-
-Card Stack::peek()
-{
-	if(!isEmpty())
-		return cards[count - 1];
-	
-	cerr << "Stack is empty!!!" << endl;
-	exit(1);
-}
-
-bool Stack::isEmpty()
-{
-	return count == 0;
-}
-	
-bool Stack::isFull()
-{
-	return count == capacity;
+	delete[] stack;
 }
 
 int Stack::getCount()
 {
 	return count;
 }
-	
+
+bool Stack::push(const Card& c)
+{
+	if (!isFull())
+	{
+		stack[count] = new Card(c);
+		count++;
+		return true;
+	}
+
+	cout << "Stack is full!!!";
+	return false;
+}
+
+Card* Stack::pop()
+{
+	if (!isEmpty())
+	{
+		count--;
+		return stack[count];
+	}
+
+	cout << "Stack is empty!!!";
+	return NULL;
+}
+
+Card* Stack::peek()
+{
+	if (!isEmpty())
+		return stack[count];
+
+	cout << "Stack is empty!!!";
+	return NULL;
+}
+
+bool Stack::isEmpty()
+{
+	return count == 0;
+}
+
+bool Stack::isFull()
+{
+	return count == capacity;
+}
+
+Stack& Stack::operator=(const Stack& other)
+{
+	if (this == &other)
+		return *this;
+
+	for (int i = 0; i < count; i++)
+		delete stack[i];
+
+	delete [] stack;
+
+	count = other.count;
+	capacity = other.capacity;
+	stack = new Card*[capacity];
+
+	for (int i = 0; i < count; i++)
+		*stack[i] = *(other.stack[i]);
+
+	return *this;
+}
+
 string Stack::display()
 {
-	string s = "";
+	string str = "";
 
-	for(int i=count-1; i >= 0; i--)
-		s = s + cards[i].display() + "\n";
+	for (int i = count - 1; i >= 0; i--)
+		str += stack[i]->display() + "\n";
 
-	return s;
+	return str;
 }
-	
-ostream& operator <<(ostream& out, const Stack& s)
-{
 
-	for(int i=s.count-1; i >= 0; i--)
-		out << s.cards[i] << endl;
+ostream& operator<<(ostream& out, const Stack& stack)
+{
+	for (int i = stack.count - 1; i >= 0; i--)
+		out << *(stack.stack[i]) << endl;
+
+	return out;
 }
