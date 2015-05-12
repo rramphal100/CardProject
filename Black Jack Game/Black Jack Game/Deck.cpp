@@ -19,7 +19,7 @@ Deck::Deck() {
 void Deck::shuffle() {
    Card temp[52];
    for (int i = 0; i<52; i++){
-      temp[i] = deck->pop();
+      temp[i] = *deck->pop();
    }
 
    /*
@@ -48,14 +48,14 @@ void Deck::shuffle() {
    for (int i = 0; i<52; i++) deck->push(temp[i]);
 }
 
-int Deck::getCount() return deck->getCount();
+int Deck::getCount(){ return deck->getCount() };
 
-Card Deck::deal() return deck->pop();
+const Card Deck::deal(){ return *deck->pop() };
 
 ostream& operator <<(ostream& out, const Deck& in){ //codes for how to output a deck called "in" with operator << using variable "out"
    Stack* copy = in.deck;
-   for (int i = 0; i<copy.getCount(); i++){
-      out << copy.deck[i] << endl;
+   for (int i = 0; i<copy->getCount(); i++){
+      out << copy->pop() << endl;
    }
    return out;
 }

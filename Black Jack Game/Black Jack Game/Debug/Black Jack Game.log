@@ -1,0 +1,33 @@
+﻿Build started 5/11/2015 7:57:36 PM.
+     1>Project "C:\Users\Owner\Documents\GitHub\CardProject\Black Jack Game\Black Jack Game\Black Jack Game.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Card.cpp Deck.cpp Hand.cpp LinkedList.cpp
+         LinkedList.cpp
+         Hand.cpp
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.cpp(8): error C3861: 'getSize': identifier not found
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.cpp(9): error C2541: 'delete' : cannot delete objects that are not pointers
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.cpp(9): error C3861: 'cardAtIndex': identifier not found
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.cpp(13): error C2440: '=' : cannot convert from 'LinkedList **' to 'LinkedList *'
+                 Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.cpp(14): error C3861: 'getHead': identifier not found
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.cpp(15): error C2662: 'int Hand::getCount(void)' : cannot convert 'this' pointer from 'const Hand' to 'Hand &'
+                 Conversion loses qualifiers
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.cpp(17): fatal error C1075: end of file found before the left brace '{' at 'c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.cpp(15)' was matched
+         Deck.cpp
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\deck.cpp(38): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\deck.cpp(51): error C2143: syntax error : missing ';' before '}'
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\deck.cpp(53): error C2143: syntax error : missing ';' before '}'
+         Card.cpp
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\card.cpp(9): error C2065: 'value' : undeclared identifier
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\card.cpp(22): error C2955: 'std::rank' : use of class template requires template argument list
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\type_traits(1299) : see declaration of 'std::rank'
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\card.cpp(22): error C2248: 'Card::rank' : cannot access private member declared in class 'Card'
+                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\card.h(13) : see declaration of 'Card::rank'
+                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\card.h(8) : see declaration of 'Card'
+         Generating Code...
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\linkedlist.cpp(62): error C4716: 'LinkedList::insertAtIndex' : must return a value
+     1>Done Building Project "C:\Users\Owner\Documents\GitHub\CardProject\Black Jack Game\Black Jack Game\Black Jack Game.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.73

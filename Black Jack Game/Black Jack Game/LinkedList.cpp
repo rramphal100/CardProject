@@ -22,7 +22,7 @@ Card* LinkedList::getAtIndex(int i){
    for (int j = 0; j <= i; j++){
       current = current->getNext();
    }
-   return &current.getData();
+   return &current->getData();
 }
 
 int LinkedList::getSize(){
@@ -42,20 +42,64 @@ void LinkedList::insertAtTail(Card* data){
 }
 
 bool LinkedList::insertAtIndex(Card* data, int index){
-   Node* current = head
+   Node* current = head;
+   if (index == 0){
+      insertAtHead(data);
+      return true;
+   }
+
+   else if (index < size){
+      for (int i = 0; i < index; i++){
+         current = current->getNext();
+      }
+      Node* insert = new Node(*data);
+      insert->setNext(current->getNext());
+      current->setNext(insert);
+      return true;
+   }
+
+   else return false;
+}
+
+Card* LinkedList::removeAtHead(){
+   Node* current = head->getNext();
+   delete head;
+   head = current;
+}
+
+Card* LinkedList::removeAtTail(){
+   Node* current = head;
+   delete tail;
+   for (int i = 0; i < size-1; i++){
+      current = current->getNext();
+   }
+   current->setNext(NULL);
+   tail = current;
+}
+
+Card* LinkedList::removeAtIndex(int index){
+   Node* current = head;
+   for (int i = 0; i < index - 1; i++){
+      current = current->getNext();
+   }
+   Node* old = current->getNext();
+   current->setNext(current->getNext()->getNext());
+   delete old;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//please check this out, guys!! I'm not sure if my logic is correct!
+Card* LinkedList::remove(Card* data){
+   Node* current = head;
+   for (int i = 0; i < size; i++){
+      if (current->getNext()->getData().compareByRank(*data) == 0){
+         if (current->getNext()->getData().compareBySuit(*data) == 0){
+            //check all files for validity of using delete!! (are they dynamically allocated/have destructors??)
+            Node* ret = current->getNext();
+            current->setNext(current->getNext()->getNext());
+            return &ret->getData();
+         }
+         else 
+      }
+   }
+}
