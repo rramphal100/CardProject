@@ -99,24 +99,39 @@ Card* LinkedList::removeAtIndex(int index){
    }
    Node* old = current->getNext();
    current->setNext(current->getNext()->getNext());
+   Card* data = &old->getData();
    delete old;
+   return data;
 }
 
 
-//please check this out, guys!! I'm not sure if my logic is correct!
+//please check this out, guys!! I'm not sure if my logic is correct! Same goes for the other functions in this file...
 Card* LinkedList::remove(Card* data){
    Node* current = head;
-   for (int i = 0; i < size; i++){
-      if (current->getNext()->getData().compareByRank(*data) == 0){
-         if (current->getNext()->getData().compareBySuit(*data) == 0){
-            //check all files for validity of using delete!! (are they dynamically allocated/have destructors??)
-            Node* ret = current->getNext();
-            current->setNext(current->getNext()->getNext());
-            return &ret->getData();
-         }
-         else {
+   //for (int i = 0; i < size; i++){
+   //   if (current->getNext()->getData().compareByRank(*data) == 0){
+   //      if (current->getNext()->getData().compareBySuit(*data) == 0){
+   //         //check all files for validity of using delete!! (are they dynamically allocated/have destructors??)
+   //         Node* ret = current->getNext();
+   //         current->setNext(current->getNext()->getNext());
+   //         return &ret->getData();
+   //      }
+   //      else {
 
-         }
+   //      }
+   //   }
+   //}
+
+   for (int i = 0; i < size; i++){
+      if (current->getData().compareByRank(*data) == 0 && current->getData().compareBySuit(*data) == 0){
+         break; //double check this, it's not finished yet...
+
       }
+   }
+   if (current->getData().compareByRank(*data) == 0 && current->getData().compareBySuit(*data) == 0){
+      Node* old = current;
+      current = current->getNext();
+      Card* data = &old->getData();
+
    }
 }
