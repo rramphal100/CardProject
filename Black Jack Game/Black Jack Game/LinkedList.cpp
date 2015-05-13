@@ -62,19 +62,34 @@ bool LinkedList::insertAtIndex(Card* data, int index){
 }
 
 Card* LinkedList::removeAtHead(){
-   Node* current = head->getNext();
-   delete head;
-   head = current;
+   /*Node* current = head;
+   head = head->getNext();
+   return &current->getData();*/
+
+   Card* data = &head->getData();
+   Node* current = head;
+   head = head->getNext();
+   delete current;
+   return data;
 }
 
 Card* LinkedList::removeAtTail(){
-   Node* current = head;
+   /*Node* current = head;
    delete tail;
    for (int i = 0; i < size-1; i++){
       current = current->getNext();
    }
    current->setNext(NULL);
+   tail = current;*/
+
+   Card* data = &tail->getData();
+   Node* current = head;
+   for (int i = 0; i < size - 1; i++){
+      current = current->getNext();
+   }
+   current->setNext(NULL);
    tail = current;
+   return data;
 }
 
 Card* LinkedList::removeAtIndex(int index){
@@ -99,7 +114,9 @@ Card* LinkedList::remove(Card* data){
             current->setNext(current->getNext()->getNext());
             return &ret->getData();
          }
-         else 
+         else {
+
+         }
       }
    }
 }
