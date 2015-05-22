@@ -11,6 +11,11 @@ int main(){
    x.shuffle();
    cout << x << endl << endl;
 
+   Card y = x.deal();
+   y = x.deal();
+
+   cout << y << endl << endl;
+
    system("PAUSE");
    return 0;
 }

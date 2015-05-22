@@ -1,3 +1,7 @@
+//Ryan Ramphal, Anthony Paliseno, Toufiq Mahmud
+//CS211
+//Blackjack Project
+
 #include "Node.h"
 
 Node::Node()

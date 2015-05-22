@@ -1,3 +1,7 @@
+//Ryan Ramphal, Anthony Paliseno, Toufiq Mahmud
+//CS211
+//Blackjack Project
+
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 

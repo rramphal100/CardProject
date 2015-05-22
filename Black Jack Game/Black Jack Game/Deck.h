@@ -1,3 +1,7 @@
+//Ryan Ramphal, Anthony Paliseno, Toufiq Mahmud
+//CS211
+//Blackjack Project
+
 #ifndef DECK_H
 #define DECK_H
 
@@ -7,7 +11,7 @@
 class Deck
 {
 private:
-   Stack* deck;
+   Stack deck;
 public:
    Deck();
    void shuffle();

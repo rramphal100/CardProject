@@ -7,7 +7,7 @@
 class Deck
 {
 private:
-   Stack* deck;
+   Stack deck;
 public:
    Deck();
    void shuffle();

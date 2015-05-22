@@ -7,33 +7,20 @@
 using namespace std;
 
 Deck::Deck() {
-   int index = 0;
-   deck = new Stack;
+   deck = Stack(52);
    for (int rank = 0; rank < 13; rank++) {
       for (int suit = 0; suit < 4; suit++) {
-         deck->push(Card(rank, suit)); //the "->" means to access a function from the class type that the pointer is storing an address for (this line is the same as a deck object x, then using x.push(...))
+         deck.push(Card(rank, suit)); //the "->" means to access a function from the class type that the pointer is storing an address for (this line is the same as a deck object x, then using x.push(...))
       }
    }
-   index++;
 }
 
 void Deck::shuffle() {
    Card temp[52];
-   for (int i = 0; i<52; i++){
-      temp[i] = *deck->pop();
+   int size = deck.getCount();
+   for (int i = 0; i<size; i++){
+      temp[i] = *(deck.pop());
    }
-
-   /*
-   while (!deck->isFull()){
-   int i = rand()%52;
-   if (temp[i] == NULL) continue;
-   else {
-   deck->push(temp[i]);
-   temp[i] = NULL;
-   }
-   }
-   }
-   */
 
    int i1, i2;
    srand(time(0));
@@ -46,17 +33,18 @@ void Deck::shuffle() {
       temp[i2] = store;
    }
 
-   for (int i = 0; i<52; i++) deck->push(temp[i]);
+   for (int i = 0; i<52; i++) deck.push(temp[i]);
 }
 
-int Deck::getCount(){ return deck->getCount(); }
+int Deck::getCount(){ return deck.getCount(); }
 
-const Card Deck::deal(){ return *deck->pop(); }
+const Card Deck::deal(){ return *deck.pop(); }
 
 ostream& operator <<(ostream& out, const Deck& in){ //codes for how to output a deck called "in" with operator << using variable "out"
-   Stack* copy = in.deck;
-   for (int i = 0; i<copy->getCount(); i++){
-      out << copy->pop() << endl;
+   Stack copy = in.deck;
+   int size = copy.getCount();
+   for (int i = 0; i < size; i++){
+      out << *copy.pop() << endl;
    }
    return out;
 }

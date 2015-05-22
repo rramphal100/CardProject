@@ -19,12 +19,12 @@ Stack::Stack(int size)
 
 Stack::Stack(const Stack& other)
 {
-   count = other.count;
+   count = 0;
    capacity = other.capacity;
    stack = new Card*[capacity];
 
-   for (int i = 0; i < count; i++)
-      *stack[i] = *(other.stack[i]);
+   for (int i = 0; i < other.count; i++)
+      this->push(*(other.stack[i]));
 }
 
 Stack::~Stack()
