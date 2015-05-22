@@ -1,12 +1,17 @@
 #include <iostream>
 #include "Deck.h"
+#include "Card.h"
+#include "Node.h"
 
 using namespace std;
 
 int main(){
-   Deck* x = new Deck();
-   x->shuffle();
-   cout << x << endl;
+   Deck x;
+
+   cout << x << endl << endl;
+
+   x.shuffle();
+   cout << x << endl << endl;
 
    system("PAUSE");
    return 0;

@@ -11,6 +11,14 @@ Hand::Hand(const Hand& other) { //copy constructor overload
    delete hand;
 
    hand = new LinkedList();
-   Node* current = getHead();
-   for (int i = 0; i<other.getCount(); i++){
-      current = new
+   Node* current = new Node(*hand->getHead());
+
+   /*for (int i = 0; i<other.getCount(); i++){
+      current = new*/
+
+   //count = other.getCount();
+}
+
+int Hand::getCount(){
+   return hand->getSize();
+}

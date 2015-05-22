@@ -8,6 +8,7 @@ using namespace std;
 
 Deck::Deck() {
    int index = 0;
+   deck = new Stack;
    for (int rank = 0; rank < 13; rank++) {
       for (int suit = 0; suit < 4; suit++) {
          deck->push(Card(rank, suit)); //the "->" means to access a function from the class type that the pointer is storing an address for (this line is the same as a deck object x, then using x.push(...))
@@ -48,9 +49,9 @@ void Deck::shuffle() {
    for (int i = 0; i<52; i++) deck->push(temp[i]);
 }
 
-int Deck::getCount(){ return deck->getCount() };
+int Deck::getCount(){ return deck->getCount(); }
 
-const Card Deck::deal(){ return *deck->pop() };
+const Card Deck::deal(){ return *deck->pop(); }
 
 ostream& operator <<(ostream& out, const Deck& in){ //codes for how to output a deck called "in" with operator << using variable "out"
    Stack* copy = in.deck;
@@ -59,38 +60,3 @@ ostream& operator <<(ostream& out, const Deck& in){ //codes for how to output a 
    }
    return out;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
