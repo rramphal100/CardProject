@@ -104,7 +104,7 @@ ostream& operator << (ostream& out, const Hand& in){
       return out;
    }
    for (int i = 0; i < in.hand->getSize(); ++i){
-      out << *in.hand->getAtIndex(i) << "\n";
+      out << *in.hand->getAtIndex(i) << ", ";
    }
    return out;
 }

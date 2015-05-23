@@ -22,13 +22,17 @@ private:
 	PlayerVector players;
 public:
 	BlackJack();
-	void createPlayers();
+	void createPlayers(const string& name);
 	void deal();
-	void dealSingleClard(Player* );
+	void dealSingleCard(Player* );
 	void displayMainMenu();
 	void startNewGame();
-	void displayHands();
-
+	void displayGameState();
+	void displayGameMenu();
+	void dealerMove();
+	void hit(Player*);
+	void stand(Player*);
+	void displayResult();
 };
 
 #endif

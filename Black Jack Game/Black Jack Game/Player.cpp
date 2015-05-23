@@ -30,14 +30,16 @@
     }
     
     int Player::evaluate() {
-		int score = hand.evaluate();
-		return score;
+		points = hand.evaluate();
+		
+		return points;
     }
     
     ostream& operator<<(ostream& os, const Player& obj) {
-        os << obj.name << endl;
-        os << obj.hand<< endl;
-        os << obj.points<< endl;
+		os << endl << "-----------------------------" <<endl;
+		os << obj.name << endl;
+        os << "Hand: " << obj.hand<< "         ";
+        os << "Score: " << obj.points<< endl<<endl;
         
         return os;
         
