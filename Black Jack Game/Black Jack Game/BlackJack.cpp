@@ -91,7 +91,7 @@ void BlackJack::hit(Player* p) {
 	cout << p->getName() << " - hits....";
 	dealSingleCard(p);
 	displayGameState();
-	if (p->evaluate() >= 21) { displayResult(); }
+	if (p->evaluate() > 21) { displayResult(); }
 
 }
 
@@ -116,7 +116,13 @@ void BlackJack::displayResult() {
 	string res;
 	int playerPoints = player->evaluate();
 	int dealerPoints = dealer->evaluate();
-	if (playerPoints == dealerPoints) {
+	if (playerPoints > 21){
+		res = player->getName() + " busted. Dealer won !!!";
+	}
+	else if (dealerPoints > 21){
+		res = "Dealer busted. " + player->getName() + " won !!!";
+	}
+	else if (playerPoints == dealerPoints) {
 		res = "Draw.";
 	}
 	else if (playerPoints > dealerPoints) {
