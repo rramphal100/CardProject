@@ -44,7 +44,7 @@ string Card::display(){
 
 ostream& operator <<(ostream& obj, const Card& card) {
 
-   return obj << card.getRankAsString() << " of " << card.getSuitAsString() << endl;
+   return obj << card.getRankAsString() << " of " << card.getSuitAsString();
 
 
 }

@@ -1,21 +1,21 @@
 #include <iostream>
+#include "LinkedList.h"
 #include "Card.h"
-#include "Deck.h"
-#include "Stack.h"
 
 using namespace std;
 
 int main(){
-   Deck x;
+   LinkedList x;
+   Card* a = new Card(3, 3);
+   x.insertAtHead(a);
    cout << x << endl << endl;
-   x.shuffle();
+   Card* b = new Card(2, 2);
+   x.insertAtHead(b);
    cout << x << endl << endl;
 
-   Card y = x.deal();
-   y = x.deal();
-
-   cout << y << endl << endl;
-
+   Card* c = new Card(0, 0);
+   x.insertAtTail(c);
+   cout << x[3] << endl;
    system("PAUSE");
    return 0;
 }

@@ -10,15 +10,16 @@
 class Node
 {
 private:
-   Card data;
+   Card* data;
    Node* next;
 public:
    Node();
-   Node(Card);
-   Node(Card, Node*);
-   void setData(Card);
-   Card getData();
+   Node(Card*);
+   Node(Card*, Node*);
+   void setData(Card*);
+   Card* getData();
    void setNext(Node*);
    Node* getNext();
 };
+
 #endif
