@@ -1,3 +1,7 @@
+//Ryan Ramphal, Anthony Paliseno, Toufiq Mahmud
+//CS211
+//Blackjack Project
+
 #include "Card.h"
 #include <iostream>
 #include <string>
@@ -6,7 +10,7 @@ using namespace std;
 
 Card::Card() {
 
-   value = -1;
+   suit = -1;
    rank = -1;
 
 }
@@ -37,9 +41,11 @@ string Card::getSuitAsString() const {
 
 
 }
-string Card::display() {
-	return "";
+
+string Card::display(){
+   return getRankAsString() + " of " + getSuitAsString();
 }
+
 ostream& operator <<(ostream& obj, const Card& card) {
 
    return obj << card.getRankAsString() << " of " << card.getSuitAsString() << endl;

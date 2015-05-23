@@ -1,3 +1,7 @@
+//Ryan Ramphal, Anthony Paliseno, Toufiq Mahmud
+//CS211
+//Blackjack Project
+
 #ifndef PLAYER_H
 #define PLAYER_H
 #include "Hand.h"

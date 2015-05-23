@@ -1,7 +1,12 @@
+//Ryan Ramphal, Anthony Paliseno, Toufiq Mahmud
+//CS211
+//Blackjack Project
+
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
 #include "Node.h"
+#include <iostream>
 
 class LinkedList
 {
@@ -27,7 +32,7 @@ public:
    int search(Card* data);
    bool isEmpty();
    const Card& operator[](int index);
-   friend ostream& operator<<(ostream&, const LinkedList&);
+   friend ostream& operator <<(ostream&, const LinkedList&);
    LinkedList& operator=(const LinkedList& otherList);
    ~LinkedList();
 };

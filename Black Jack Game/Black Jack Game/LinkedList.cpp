@@ -1,3 +1,7 @@
+//Ryan Ramphal, Anthony Paliseno, Toufiq Mahmud
+//CS211
+//Blackjack Project
+
 #include "LinkedList.h"
 using namespace std;
 
@@ -69,7 +73,6 @@ Card* LinkedList::removeAtHead(){
    Card* data = &head->getData();
    Node* current = head;
    head = head->getNext();
-   delete current;
    return data;
 }
 
@@ -100,39 +103,40 @@ Card* LinkedList::removeAtIndex(int index){
    Node* old = current->getNext();
    current->setNext(current->getNext()->getNext());
    Card* data = &old->getData();
-   delete old;
    return data;
 }
 
 
 //please check this out, guys!! I'm not sure if my logic is correct! Same goes for the other functions in this file...
 Card* LinkedList::remove(Card* data){
+   int i = 0;
    Node* current = head;
-   //for (int i = 0; i < size; i++){
-   //   if (current->getNext()->getData().compareByRank(*data) == 0){
-   //      if (current->getNext()->getData().compareBySuit(*data) == 0){
-   //         //check all files for validity of using delete!! (are they dynamically allocated/have destructors??)
-   //         Node* ret = current->getNext();
-   //         current->setNext(current->getNext()->getNext());
-   //         return &ret->getData();
-   //      }
-   //      else {
-
-   //      }
-   //   }
-   //}
-
-   for (int i = 0; i < size; i++){
+   while (i < size){
       if (current->getData().compareByRank(*data) == 0 && current->getData().compareBySuit(*data) == 0){
-         break; //double check this, it's not finished yet...
-
+         Card* data = &current->getData();
+         removeAtIndex(i);
+         return data;
       }
+      i++;
    }
-   if (current->getData().compareByRank(*data) == 0 && current->getData().compareBySuit(*data) == 0){
-      Node* old = current;
-      current = current->getNext();
-      Card* data = &old->getData();
+   
+}
 
+
+
+
+
+ostream& operator <<(ostream& out, const LinkedList& list){
+   Node* current = list.head;
+   for (int i = 0; i < list.size; i++){
+      out << current->getData() << " ";
+      current = current->getNext();
    }
-   return data;
+   return out;
+}
+
+
+
+LinkedList::~LinkedList(){
+
 }
