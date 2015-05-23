@@ -28,27 +28,34 @@ int Card::compareBySuit(const Card& card) { return suit - card.suit; }
 
 string Card::getRankAsString() const {
 
-   string rankArray[] = { "Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine",
-      "Ten", "Jack", "Queen", "King" };
+   string rankArray[] = { "A", "2", "3", "4", "5", "6", "7", "8", "9",
+      "10", "J", "Q", "K" };
    return rankArray[rank];
 
 }
 
 string Card::getSuitAsString() const {
 
-   string suitArray[] = { "Hearts", "Spades", "Diamonds", "Clubs" };
+   string suitArray[] = { "H", "S", "D", "C" };
    return suitArray[suit];
 
 
 }
 
 string Card::display(){
-   return getRankAsString() + " of " + getSuitAsString();
+   return getRankAsString() + getSuitAsString();
 }
 
-ostream& operator <<(ostream& obj, const Card& card) {
 
-   return obj << card.getRankAsString() << " of " << card.getSuitAsString() << endl;
 
+ostream& operator <<(ostream& o, const Card& card) {
+	/*o << endl;
+	o << ".------. " << endl;
+	o << "|  (')  |" << endl;
+	o << "| (_X_) |" << endl;
+	o << "| A ^ C |" << endl;
+	o << "`-------'" << endl;*/
+	o << card.getRankAsString() << card.getSuitAsString();
+	return o;
 
 }

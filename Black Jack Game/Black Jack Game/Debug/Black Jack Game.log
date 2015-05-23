@@ -1,34 +1,21 @@
-﻿Build started 5/23/2015 2:12:31 AM.
-     1>Project "C:\Users\Owner\Documents\GitHub\CardProject\Black Jack Game\Black Jack Game\Black Jack Game.vcxproj" on node 2 (Build target(s)).
+﻿Build started 5/23/2015 3:28:02 PM.
+     1>Project "C:\Users\t\Desktop\card project\CardProject\Black Jack Game\Black Jack Game\Black Jack Game.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Deck.cpp Hand.cpp LinkedList.cpp Main.cpp Player.cpp
-         Player.cpp
-     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(9): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'Hand *' (or there is no acceptable conversion)
-                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.h(20): could be 'Hand &Hand::operator =(const Hand &)'
-                 while trying to match the argument list '(Hand, Hand *)'
-     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(16): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'Hand *' (or there is no acceptable conversion)
-                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.h(20): could be 'Hand &Hand::operator =(const Hand &)'
-                 while trying to match the argument list '(Hand, Hand *)'
-     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(31): error C2819: type 'Hand' does not have an overloaded member 'operator ->'
-                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.h(13) : see declaration of 'Hand'
-                 did you intend to use '.' instead?
-     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(31): error C2039: 'insertAtTail' : is not a member of 'Hand'
-                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.h(13) : see declaration of 'Hand'
-     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(36): error C2819: type 'Hand' does not have an overloaded member 'operator ->'
-                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.h(13) : see declaration of 'Hand'
-                 did you intend to use '.' instead?
-     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(36): error C2232: '->Hand::getCount' : left operand has 'class' type, use '.'
-     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(43): error C2039: '<<' : is not a member of 'Player'
-                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.h(11) : see declaration of 'Player'
-         LinkedList.cpp
-         Hand.cpp
-         Deck.cpp
-     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\deck.cpp(30): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-         Generating Code...
-         Skipping... (no relevant changes detected)
-         Main.cpp
-     1>Done Building Project "C:\Users\Owner\Documents\GitHub\CardProject\Black Jack Game\Black Jack Game\Black Jack Game.vcxproj" (Build target(s)) -- FAILED.
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt BlackJack.cpp
+         BlackJack.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\t\Desktop\card project\CardProject\Black Jack Game\Debug\Black Jack Game.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\t\Desktop\card project\CardProject\Black Jack Game\Debug\Black Jack Game.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\t\Desktop\card project\CardProject\Black Jack Game\Debug\Black Jack Game.lib" /MACHINE:X86 Debug\BlackJack.obj
+         Debug\Card.obj
+         Debug\Deck.obj
+         Debug\Hand.obj
+         Debug\LinkedList.obj
+         Debug\Main.obj
+         Debug\Node.obj
+         Debug\Player.obj
+         Debug\Stack.obj
+         Black Jack Game.vcxproj -> C:\Users\t\Desktop\card project\CardProject\Black Jack Game\Debug\Black Jack Game.exe
+     1>Done Building Project "C:\Users\t\Desktop\card project\CardProject\Black Jack Game\Black Jack Game\Black Jack Game.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:01.68
+Time Elapsed 00:00:01.51
