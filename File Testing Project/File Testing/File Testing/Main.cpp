@@ -1,21 +1,28 @@
 #include <iostream>
 #include "LinkedList.h"
 #include "Card.h"
+#include "Hand.h"
 
 using namespace std;
 
 int main(){
-   LinkedList x;
-   Card* a = new Card(3, 3);
-   x.insertAtHead(a);
-   cout << x << endl << endl;
-   Card* b = new Card(2, 2);
-   x.insertAtHead(b);
+   Hand x;
+   Card* a = new Card(8, 1);
+  
+   Card* b = new Card(0, 0);
+
+   Card* c = new Card(2, 2);
+
+   Card* d = new Card(10, 2);
+   x.insertLast(b);
+   x.insertLast(a);
+   x.insertLast(c);
+   x.insertByRank(d);
+   cout << x.evaluate() << endl << endl;
+
+   x.remove();
    cout << x << endl << endl;
 
-   Card* c = new Card(0, 0);
-   x.insertAtTail(c);
-   cout << x[3] << endl;
    system("PAUSE");
    return 0;
 }

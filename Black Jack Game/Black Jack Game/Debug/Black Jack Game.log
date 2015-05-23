@@ -1,64 +1,34 @@
-﻿Build started 5/21/2015 7:48:52 PM.
+﻿Build started 5/23/2015 2:12:31 AM.
      1>Project "C:\Users\Owner\Documents\GitHub\CardProject\Black Jack Game\Black Jack Game\Black Jack Game.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Player.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Deck.cpp Hand.cpp LinkedList.cpp Main.cpp Player.cpp
          Player.cpp
-     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(5): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'Hand *' (or there is no acceptable conversion)
-                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.h(15): could be 'Hand &Hand::operator =(Hand &)'
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(9): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'Hand *' (or there is no acceptable conversion)
+                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.h(20): could be 'Hand &Hand::operator =(const Hand &)'
                  while trying to match the argument list '(Hand, Hand *)'
-     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(12): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'Hand *' (or there is no acceptable conversion)
-                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.h(15): could be 'Hand &Hand::operator =(Hand &)'
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(16): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'Hand *' (or there is no acceptable conversion)
+                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.h(20): could be 'Hand &Hand::operator =(const Hand &)'
                  while trying to match the argument list '(Hand, Hand *)'
-     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(27): error C2819: type 'Hand' does not have an overloaded member 'operator ->'
-                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.h(7) : see declaration of 'Hand'
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(31): error C2819: type 'Hand' does not have an overloaded member 'operator ->'
+                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.h(13) : see declaration of 'Hand'
                  did you intend to use '.' instead?
-     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(27): error C2039: 'insertAtTail' : is not a member of 'Hand'
-                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.h(7) : see declaration of 'Hand'
-     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(32): error C2819: type 'Hand' does not have an overloaded member 'operator ->'
-                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.h(7) : see declaration of 'Hand'
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(31): error C2039: 'insertAtTail' : is not a member of 'Hand'
+                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.h(13) : see declaration of 'Hand'
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(36): error C2819: type 'Hand' does not have an overloaded member 'operator ->'
+                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.h(13) : see declaration of 'Hand'
                  did you intend to use '.' instead?
-     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(32): error C2232: '->Hand::getCount' : left operand has 'class' type, use '.'
-     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(39): error C2039: '<<' : is not a member of 'Player'
-                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.h(7) : see declaration of 'Player'
-     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(42): error C2679: binary '<<' : no operator found which takes a right-hand operand of type 'const Hand' (or there is no acceptable conversion)
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(498): could be 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_streambuf<char,std::char_traits<char>> *)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(478): or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(const void *)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(458): or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long double)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(438): or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(418): or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(float)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(397): or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned __int64)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(377): or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(__int64)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(356): or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned long)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(336): or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(316): or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned int)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(291): or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(271): or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned short)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(237): or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(short)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(217): or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::_Bool)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(210): or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::ios_base &(__cdecl *)(std::ios_base &))'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(203): or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &))'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(197): or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &))'
-                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.h(24): or       'std::ostream &operator <<(std::ostream &,const Player &)'
-                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\hand.h(27): or       'std::ostream &operator <<(std::ostream &,Hand &)'
-                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\linkedlist.h(31): or       'std::ostream &operator <<(std::ostream &,const LinkedList &)'
-                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\card.h(26): or       'std::ostream &operator <<(std::ostream &,const Card &)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(1026): or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<char,std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const std::error_code &)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(988): or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<char,std::char_traits<char>,Hand>(std::basic_ostream<char,std::char_traits<char>> &&,const _Ty &)'
-                 with
-                 [
-                     _Ty=Hand
-                 ]
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(978): or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,unsigned char)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(971): or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const unsigned char *)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(964): or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,signed char)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(957): or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const signed char *)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(831): or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,char)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(784): or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const char *)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(746): or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<char,std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,char)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\ostream(699): or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<char,std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const char *)'
-                 while trying to match the argument list '(std::ostream, const Hand)'
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(36): error C2232: '->Hand::getCount' : left operand has 'class' type, use '.'
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.cpp(43): error C2039: '<<' : is not a member of 'Player'
+                 c:\users\owner\documents\github\cardproject\black jack game\black jack game\player.h(11) : see declaration of 'Player'
+         LinkedList.cpp
+         Hand.cpp
+         Deck.cpp
+     1>c:\users\owner\documents\github\cardproject\black jack game\black jack game\deck.cpp(30): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         Main.cpp
      1>Done Building Project "C:\Users\Owner\Documents\GitHub\CardProject\Black Jack Game\Black Jack Game\Black Jack Game.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:00.40
+Time Elapsed 00:00:01.68
