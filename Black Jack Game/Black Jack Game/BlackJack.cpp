@@ -9,9 +9,9 @@ BlackJack::BlackJack() {
 
 void BlackJack::createPlayers() {
 	//Create player object
-	string name;
-	cout << "Please enter your name" << endl;
-	cin >> name;
+	string name="test";
+	//cout << "Please enter your name" << endl;
+	//cin >> name;
 	Player* p = new Player(name);
 	players.push_back(p);
 
@@ -24,9 +24,23 @@ void BlackJack::createPlayers() {
 void BlackJack::startNewGame() {
 	cout << endl << endl << "-------------------------------" << endl;
 	cout << "Starting  new game..." << endl;
+	deal();
+	displayHands();
+
+
+}
+
+void BlackJack::deal() {
 	cout << "Dealing cards..." << endl;
+	for (int i = 0, l = players.size(); i < l; i++){
+		Card* c = deck.deal(0);
+		players.at(i)->addCard(c);
+	}
+}
 
-
+void BlackJack::dealSingleClard(Player* player){
+	Card* c = deck.deal(0);
+	player->addCard(c);
 }
 void BlackJack::displayMainMenu() {
 	int command;
@@ -48,3 +62,8 @@ void BlackJack::displayMainMenu() {
 	}
 }
 
+void BlackJack::displayHands() {
+	for (int i = 0, l = players.size(); i < l; i++){
+		cout << *(players.at(i));
+	}
+}

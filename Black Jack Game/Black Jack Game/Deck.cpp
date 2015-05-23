@@ -43,6 +43,7 @@ void Deck::shuffle() {
 int Deck::getCount(){ return deck.getCount(); }
 
 const Card Deck::deal(){ return *deck.pop(); }
+Card* Deck::deal(int i){ return deck.pop(); }
 
 ostream& operator <<(ostream& out, const Deck& in){ //codes for how to output a deck called "in" with operator << using variable "out"
    Stack copy = in.deck;

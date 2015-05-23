@@ -24,8 +24,10 @@ public:
 	BlackJack();
 	void createPlayers();
 	void deal();
+	void dealSingleClard(Player* );
 	void displayMainMenu();
 	void startNewGame();
+	void displayHands();
 
 };
 
