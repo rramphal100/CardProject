@@ -1,3 +1,7 @@
+debug
+*.opensdf
+*.sdf
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
