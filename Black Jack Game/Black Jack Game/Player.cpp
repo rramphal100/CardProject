@@ -6,14 +6,14 @@
 #include <iostream>
     
     Player::Player() {
-        hand = new Hand();
+        //hand = new Hand();
         name = "noname";
         points = 0;
     }
     
     Player::Player(string name) {
         this->name = name;
-        hand = new Hand();
+        //hand = new Hand();
         points = 0;
     }
     
@@ -28,19 +28,20 @@
     }
     
     void Player::addCard(Card* d) {
-        hand->insertAtTail(d); // i assume this is at the end of the "hand", you usually dont add from the top, however where its added I think is arbritary to blackjack
+        hand.insertLast(d); // i assume this is at the end of the "hand", you usually dont add from the top, however where its added I think is arbritary to blackjack
         // however can just switch to inserAthead(Card* data); Hand is a LinkedList* so this should work
     }
     
     int Player::evaluate() {
-        for (int i = 0; i < hand->getCount(); i++) {
+      /*  for (int i = 0; i < hand->getCount(); i++) {
             
             
         }    
-    
+    */
+		return 0;
     }
     
-    ostream& Player::operator<<(ostream& os, const Player& obj) {
+    ostream& operator<<(ostream& os, const Player& obj) {
         
         os << obj.name << endl;
         os << obj.hand << endl;

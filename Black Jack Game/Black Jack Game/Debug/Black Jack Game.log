@@ -1,73 +1,18 @@
-﻿Build started 5/23/2015 12:16:32 PM.
+﻿Build started 5/23/2015 12:36:27 PM.
      1>Project "C:\Users\t\Desktop\card project\CardProject\Black Jack Game\Black Jack Game\Black Jack Game.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt BlackJack.cpp Card.cpp Deck.cpp Hand.cpp LinkedList.cpp Main.cpp Node.cpp Player.cpp Stack.cpp
-         Stack.cpp
-         Player.cpp
-     1>c:\users\t\desktop\card project\cardproject\black jack game\black jack game\player.cpp(9): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'Hand *' (or there is no acceptable conversion)
-                 c:\users\t\desktop\card project\cardproject\black jack game\black jack game\hand.h(20): could be 'Hand &Hand::operator =(const Hand &)'
-                 while trying to match the argument list '(Hand, Hand *)'
-     1>c:\users\t\desktop\card project\cardproject\black jack game\black jack game\player.cpp(16): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'Hand *' (or there is no acceptable conversion)
-                 c:\users\t\desktop\card project\cardproject\black jack game\black jack game\hand.h(20): could be 'Hand &Hand::operator =(const Hand &)'
-                 while trying to match the argument list '(Hand, Hand *)'
-     1>c:\users\t\desktop\card project\cardproject\black jack game\black jack game\player.cpp(31): error C2819: type 'Hand' does not have an overloaded member 'operator ->'
-                 c:\users\t\desktop\card project\cardproject\black jack game\black jack game\hand.h(13) : see declaration of 'Hand'
-                 did you intend to use '.' instead?
-     1>c:\users\t\desktop\card project\cardproject\black jack game\black jack game\player.cpp(31): error C2039: 'insertAtTail' : is not a member of 'Hand'
-                 c:\users\t\desktop\card project\cardproject\black jack game\black jack game\hand.h(13) : see declaration of 'Hand'
-     1>c:\users\t\desktop\card project\cardproject\black jack game\black jack game\player.cpp(36): error C2819: type 'Hand' does not have an overloaded member 'operator ->'
-                 c:\users\t\desktop\card project\cardproject\black jack game\black jack game\hand.h(13) : see declaration of 'Hand'
-                 did you intend to use '.' instead?
-     1>c:\users\t\desktop\card project\cardproject\black jack game\black jack game\player.cpp(36): error C2232: '->Hand::getCount' : left operand has 'class' type, use '.'
-     1>c:\users\t\desktop\card project\cardproject\black jack game\black jack game\player.cpp(43): error C2039: '<<' : is not a member of 'Player'
-                 c:\users\t\desktop\card project\cardproject\black jack game\black jack game\player.h(11) : see declaration of 'Player'
-         Node.cpp
-         Main.cpp
-         LinkedList.cpp
-         Hand.cpp
-         Deck.cpp
-     1>c:\users\t\desktop\card project\cardproject\black jack game\black jack game\deck.cpp(30): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-         Card.cpp
-         BlackJack.cpp
-     1>c:\users\t\desktop\card project\cardproject\black jack game\black jack game\blackjack.cpp(14): error C2679: binary '>>' : no operator found which takes a right-hand operand of type 'std::string' (or there is no acceptable conversion)
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(485): could be 'std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(std::basic_streambuf<char,std::char_traits<char>> *)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(466): or       'std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(void *&)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(448): or       'std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(long double &)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(430): or       'std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(double &)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(411): or       'std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(float &)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(392): or       'std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(unsigned __int64 &)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(373): or       'std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(__int64 &)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(353): or       'std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(unsigned long &)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(335): or       'std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(long &)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(317): or       'std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(unsigned int &)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(291): or       'std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(int &)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(272): or       'std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(unsigned short &)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(237): or       'std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(short &)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(218): or       'std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(std::_Bool &)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(211): or       'std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(std::ios_base &(__cdecl *)(std::ios_base &))'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(204): or       'std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &))'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(198): or       'std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(std::basic_istream<char,std::char_traits<char>> &(__cdecl *)(std::basic_istream<char,std::char_traits<char>> &))'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(1103): or       'std::basic_istream<char,std::char_traits<char>> &std::operator >><char,std::char_traits<char>,std::string>(std::basic_istream<char,std::char_traits<char>> &&,_Ty &)'
-                 with
-                 [
-                     _Ty=std::string
-                 ]
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(1093): or       'std::basic_istream<char,std::char_traits<char>> &std::operator >><std::char_traits<char>>(std::basic_istream<char,std::char_traits<char>> &,unsigned char &)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(1086): or       'std::basic_istream<char,std::char_traits<char>> &std::operator >><std::char_traits<char>>(std::basic_istream<char,std::char_traits<char>> &,unsigned char *)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(1079): or       'std::basic_istream<char,std::char_traits<char>> &std::operator >><std::char_traits<char>>(std::basic_istream<char,std::char_traits<char>> &,signed char &)'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\istream(1072): or       'std::basic_istream<char,std::char_traits<char>> &std::operator >><std::char_traits<char>>(std::basic_istream<char,std::char_traits<char>> &,signed char *)'
-                 while trying to match the argument list '(std::istream, std::string)'
-     1>c:\users\t\desktop\card project\cardproject\black jack game\black jack game\blackjack.cpp(24): error C2143: syntax error : missing ';' before '}'
-     1>c:\users\t\desktop\card project\cardproject\black jack game\black jack game\blackjack.cpp(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\t\desktop\card project\cardproject\black jack game\black jack game\blackjack.cpp(27): error C2556: 'int BlackJack::createPlayers(void)' : overloaded function differs only by return type from 'void BlackJack::createPlayers(void)'
-                 c:\users\t\desktop\card project\cardproject\black jack game\black jack game\blackjack.h(22) : see declaration of 'BlackJack::createPlayers'
-     1>c:\users\t\desktop\card project\cardproject\black jack game\black jack game\blackjack.cpp(27): error C2371: 'BlackJack::createPlayers' : redefinition; different basic types
-                 c:\users\t\desktop\card project\cardproject\black jack game\black jack game\blackjack.h(22) : see declaration of 'BlackJack::createPlayers'
-     1>c:\users\t\desktop\card project\cardproject\black jack game\black jack game\blackjack.cpp(27): error C2084: function 'void BlackJack::createPlayers(void)' already has a body
-                 c:\users\t\desktop\card project\cardproject\black jack game\black jack game\blackjack.h(22) : see previous definition of 'createPlayers'
-         Generating Code...
-     1>Done Building Project "C:\Users\t\Desktop\card project\CardProject\Black Jack Game\Black Jack Game\Black Jack Game.vcxproj" (Build target(s)) -- FAILED.
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\t\Desktop\card project\CardProject\Black Jack Game\Debug\Black Jack Game.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\t\Desktop\card project\CardProject\Black Jack Game\Debug\Black Jack Game.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\t\Desktop\card project\CardProject\Black Jack Game\Debug\Black Jack Game.lib" /MACHINE:X86 Debug\BlackJack.obj
+         Debug\Card.obj
+         Debug\Deck.obj
+         Debug\Hand.obj
+         Debug\LinkedList.obj
+         Debug\Main.obj
+         Debug\Node.obj
+         Debug\Player.obj
+         Debug\Stack.obj
+         Black Jack Game.vcxproj -> C:\Users\t\Desktop\card project\CardProject\Black Jack Game\Debug\Black Jack Game.exe
+     1>Done Building Project "C:\Users\t\Desktop\card project\CardProject\Black Jack Game\Black Jack Game\Black Jack Game.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:05.67
+Time Elapsed 00:00:00.25

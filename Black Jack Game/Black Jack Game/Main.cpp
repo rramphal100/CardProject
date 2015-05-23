@@ -3,21 +3,12 @@
 //Blackjack Project
 
 #include <iostream>
-#include "Deck.h"
-#include "Card.h"
-#include "Node.h"
+#include "BlackJack.h"
 
 using namespace std;
 
 int main(){
-   Deck x;
-
-   cout << x << endl << endl;
-
-   x.shuffle();
-   cout << x << endl << endl;
-
-   system("PAUSE");
+	BlackJack bj;
    return 0;
 
 

@@ -4,9 +4,12 @@
 
 #ifndef BLACKJACK_H
 #define BLACKJACK_H
+
+#include <iostream>
+#include <vector>
+#include <string>
 #include "Deck.h"
 #include "Player.h"
-#include <vector>
 
 typedef vector<Player*> PlayerVector;
 enum MainMenu {NEWGAME, QUIT};
