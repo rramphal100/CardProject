@@ -134,4 +134,5 @@ Card* LinkedList::remove(Card* data){
       Card* data = &old->getData();
 
    }
+   return data;
 }

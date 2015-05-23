@@ -19,7 +19,7 @@ void Card::setSuit(int suit) { this->suit = suit; }
 void Card::setRank(int rank) { this->rank = rank; }
 
 //negative means the current greater than the card passed in
-int compareByRank(const Card& card) { return rank - card.rank; }
+int Card::compareByRank(const Card& card) { return rank - card.rank; }
 int Card::compareBySuit(const Card& card) { return suit - card.suit; }
 
 string Card::getRankAsString() const {
@@ -37,7 +37,9 @@ string Card::getSuitAsString() const {
 
 
 }
-
+string Card::display() {
+	return "";
+}
 ostream& operator <<(ostream& obj, const Card& card) {
 
    return obj << card.getRankAsString() << " of " << card.getSuitAsString() << endl;

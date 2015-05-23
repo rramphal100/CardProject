@@ -11,7 +11,7 @@ private:
 public:
    Deck();
    void shuffle();
-   int getCount();
+   int getCount() const;
    const Card deal();
    //const Card* deal(int); //extra credit
    friend ostream& operator <<(ostream& out, const Deck& in);

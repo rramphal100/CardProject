@@ -11,6 +11,7 @@ private:
    int suit;
    //rank is represented with values 0-12
    int rank;
+   int value;
 public:
    Card();
    Card(int, int);
