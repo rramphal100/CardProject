@@ -5,8 +5,8 @@ PlayerVector players;
 string name;
 BlackJack::BlackJack() {
 	name = "pLayer 1";
-	//cout << "Please enter your name" << endl;
-	//cin >> name;
+	cout << "Please enter your name" << endl;
+	cin >> name;
 	startNewGame();
 	displayMainMenu();
 }
