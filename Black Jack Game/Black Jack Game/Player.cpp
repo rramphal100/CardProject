@@ -38,7 +38,7 @@
     ostream& operator<<(ostream& os, const Player& obj) {
 		os << endl << "-----------------------------" <<endl;
 		os << obj.name << endl;
-        os << "Hand: " << obj.hand<< "         ";
+        os << "Hand: " << obj.hand << "         ";
         os << "Score: " << obj.points<< endl<<endl;
         
         return os;

@@ -7,6 +7,10 @@
 
 #include <iostream>
 #include <vector>
+//Ryan Ramphal, Anthony Paliseno, Toufiq Mahmud
+//CS211
+//Blackjack Project
+
 #include <string>
 #include "Deck.h"
 #include "Player.h"
@@ -18,7 +22,7 @@ enum GameOptions {HIT, STAND};
 class BlackJack
 {
 private:
-	Deck deck;
+	Deck* deck;
 	PlayerVector players;
 public:
 	BlackJack();

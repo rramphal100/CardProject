@@ -1,10 +1,15 @@
+//Ryan Ramphal, Anthony Paliseno, Toufiq Mahmud
+//CS211
+//Blackjack Project
+
 #include "BlackJack.h"
 
 PlayerVector players;
 
 string name;
+//int numPlayers; string names[numPlayers];
 BlackJack::BlackJack() {
-	name = "pLayer 1";
+	name = "Player 1";
 	cout << "Please enter your name" << endl;
 	cin >> name;
 	startNewGame();
@@ -25,6 +30,7 @@ void BlackJack::createPlayers(const string& name) {
 }
 
 void BlackJack::startNewGame() {
+   deck = new Deck();
 	createPlayers(name);
 	cout << endl << endl << "-------------------------------" << endl;
 	cout << "Dealing cards..." << endl << endl;
@@ -36,7 +42,7 @@ void BlackJack::startNewGame() {
 }
 
 void BlackJack::deal() {
-	deck.shuffle();
+	deck->shuffle();
 	//deal 2 cards to each player
 	for (int i = 0, l = players.size(); i < l; i++){
 		dealSingleCard(players.at(i));
@@ -45,7 +51,7 @@ void BlackJack::deal() {
 }
 
 void BlackJack::dealSingleCard(Player* player){
-	Card* c = deck.deal(0);
+   Card* c = deck->deal(0);
 	player->addCard(c);
 }
 void BlackJack::displayMainMenu() {
@@ -69,6 +75,7 @@ void BlackJack::displayMainMenu() {
 }
 void BlackJack::displayGameMenu() {
 	int command;
+   if (players.at(0)->evaluate() == 21) displayResult();
 	while (true){
 		cout << endl << endl << "----------------------------------" << endl;
 		cout << "0 - Hit\n1 - Stand" << endl;
@@ -91,7 +98,7 @@ void BlackJack::hit(Player* p) {
 	cout << p->getName() << " - hits....";
 	dealSingleCard(p);
 	displayGameState();
-	if (p->evaluate() > 21) { displayResult(); }
+	if (p->evaluate() > 20) { displayResult(); }
 
 }
 
@@ -103,7 +110,7 @@ void BlackJack::dealerMove() {
 	Player* dealer = players.at(0);
 	int points = dealer->evaluate();
 	//not a very sophisticated algorithm...
-	while (points < 16) {
+	while (points < 17) {
 		hit(dealer);
 		points = dealer->evaluate();
 	}
@@ -135,6 +142,7 @@ void BlackJack::displayResult() {
 	cout << endl << "***************************" << endl;
 	cout << res;
 	cout << endl << "***************************" << endl;
+
 	displayMainMenu();
 }
 
